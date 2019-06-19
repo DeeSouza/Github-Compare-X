@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Logo from '../../assets/images/git-compare-logo.png';
 import { Container, Form } from './styles';
 import CompareList from '../../components/CompareList';
 
-const Main = () => (
-  <Container>
-    <img src={Logo} alt="Github Compare" />
+export default class Main extends Component {
+  state = {
+    repositoryInput: '',
+    repositories: [],
+  };
 
-    <Form>
-      <input type="text" placeholder="user/repository" />
-      <button type="submit">OK</button>
-    </Form>
+  render() {
+    return (
+      <Container>
+        <img src={Logo} alt="Github Compare" />
 
-    <CompareList />
-  </Container>
-);
+        <Form>
+          <input type="text" placeholder="user/repository" value={this.state.repositoryInput} />
+          <button type="submit">OK</button>
+        </Form>
 
-export default Main;
+        <CompareList repositories={this.state.repositories} />
+      </Container>
+    );
+  }
+}
