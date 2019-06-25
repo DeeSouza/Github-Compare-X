@@ -10,10 +10,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background-color: #9B65E6;
+    background-color: #eef0f2;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    font-family: sans-serif;
+    font-family: 'Titillium Web';
   }
 `;
 

@@ -14,6 +14,70 @@ export const Repository = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 10px;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  &.loading {
+    &:before {
+      display: block;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+  }
+
+  &:hover {
+    button {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  button {
+    &.remove-repo {
+      right: 10px;
+
+      i {
+        color: #ff837b;
+      }
+    }
+
+    &.refresh-repo {
+      left: 10px;
+
+      i {
+        color: #00bfaa;
+      }
+    }
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    top: 10px;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 50%;
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f1eded;
+    }
+
+    i {
+      font-size: 18px;
+    }
+  }
 
   header {
     padding: 30px;
@@ -45,10 +109,9 @@ export const Repository = styled.div`
       padding: 12px 20px;
 
       small {
-        font-weight: bolder;
+        font-weight: 600;
         font-size: 12px;
         color: #999;
-        font-style: italic;
       }
 
       &:nth-child(odd) {

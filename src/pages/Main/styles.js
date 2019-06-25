@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
+
+  img {
+    width: 100px;
+  }
 `;
 
 export const Form = styled.form`
@@ -19,24 +23,30 @@ export const Form = styled.form`
     padding: 0 20px;
     background-color: #fff;
     font-size: 18px;
-    color: #444;
-    border-radius: 3px;
-    border: ${props => (props.withError ? '2px solid #F00' : 0)};
+    color: #20252d;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: none;
+    border-left: ${props => (props.withError ? '10px solid #FF3F3F' : '10px solid #00BFAA')};
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
   }
 
   button {
     width: 80px;
     height: 55px;
     padding: 0 20px;
-    margin-left: 10px;
-    background-color: #63f5b8;
+    margin-left: 0px;
+    background-color: #20252d;
     color: #fff;
     border: 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
     font-size: 20px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
     transition: all 0.25s ease-out;
 
     &:hover {
-      background-color: #52d89f;
+      background-color: #363d48;
     }
   }
 `;
