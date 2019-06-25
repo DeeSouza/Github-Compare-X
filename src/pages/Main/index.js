@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import Logo from '../../assets/images/git-compare-logo.svg';
-import { Container, Form } from './styles';
+import { Container, Form, Wrapper } from './styles';
 import CompareList from '../../components/CompareList';
 import api from '../../services/api';
 
@@ -130,11 +130,13 @@ export default class Main extends Component {
           </button>
         </Form>
 
+      <Wrapper>
         <CompareList
           repositories={repositories}
           onTrash={this.handleRemoveRepository}
           onRefresh={this.handleRefreshRepository}
         />
+      </Wrapper>
       </Container>
     );
   }

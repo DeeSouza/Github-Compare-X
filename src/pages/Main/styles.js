@@ -11,6 +11,33 @@ export const Container = styled.div`
   }
 `;
 
+export const Wrapper = styled.div`
+  max-width: 1024px;
+  width: 90%;
+  overflow: auto;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  display: flex;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+`;
+
 export const Form = styled.form`
   margin-top: 20px;
   width: 100%;
@@ -51,4 +78,4 @@ export const Form = styled.form`
   }
 `;
 
-export default { Container, Form };
+export default { Container, Form, Wrapper };

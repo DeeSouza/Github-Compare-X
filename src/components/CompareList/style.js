@@ -4,11 +4,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 50px;
+  margin: auto;
 `;
 
 export const Repository = styled.div`
-  width: 250px;
+  min-width: 250px;
   background-color: #fff;
   border-radius: 5px;
   display: flex;
@@ -17,21 +17,12 @@ export const Repository = styled.div`
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
   position: relative;
 
-  &.loading {
-    &:before {
-      display: block;
-    }
+  &:first-child {
+    margin-left: 0;
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    display: none;
+  &:last-child {
+    margin-right: 0;
   }
 
   &:hover {
