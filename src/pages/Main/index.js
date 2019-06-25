@@ -130,13 +130,13 @@ export default class Main extends Component {
           </button>
         </Form>
 
-      <Wrapper>
-        <CompareList
-          repositories={repositories}
-          onTrash={this.handleRemoveRepository}
-          onRefresh={this.handleRefreshRepository}
-        />
-      </Wrapper>
+        <Wrapper>
+          <CompareList
+            repositories={repositories}
+            onTrash={this.handleRemoveRepository}
+            onRefresh={this.handleRefreshRepository}
+          />
+        </Wrapper>
       </Container>
     );
   }
