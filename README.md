@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to GitHub Compare 👋</h1>
+<h1 align="center">GitHub Compare X</h1>
 <p>
   <img src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
