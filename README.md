@@ -11,6 +11,8 @@
 yarn
 ```
 
+No Heroku é preciso adicionar um buildpack: `mars/create-react-app`.
+
 ## Usage
 
 ```sh
