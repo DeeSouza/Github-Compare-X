@@ -87,6 +87,14 @@ export default class Main extends Component {
       const { repositoryInput, repositories } = this.state;
       const { data: repository } = await api.get(`/repos/${repositoryInput}`);
 
+      const has = repositories.find(repo => repo.id === repository.id);
+      if (has && has !== undefined) {
+        this.setState({
+          repositoryError: true,
+        });
+        return false;
+      }
+
       repository.lastCommit = moment(repository.pushed_at).fromNow();
 
       this.setState({
